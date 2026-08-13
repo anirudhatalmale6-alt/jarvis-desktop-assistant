@@ -1,0 +1,7 @@
+.venv/
+.work/
+__pycache__/
+*.pyc
+settings.txt
+activity.log
+.voice-test.mp3

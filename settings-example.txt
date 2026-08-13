@@ -1,0 +1,84 @@
+# ============================================================
+#  Jarvis settings
+#
+#  Lines starting with # are notes and are ignored.
+#  Save the file after editing, then run check.bat.
+# ============================================================
+
+
+# --- REQUIRED -----------------------------------------------
+# Your Anthropic API key. Get one at console.anthropic.com under
+# API Keys. It starts with sk-ant-
+# This is the only setting Jarvis cannot start without.
+
+ANTHROPIC_API_KEY=
+
+
+# --- EMAIL (optional, but this is the useful bit) -----------
+# Your Google Workspace address, and an APP PASSWORD -- not your
+# normal password. Making one takes about two minutes and the
+# steps are in docs\EMAIL-SETUP.md
+#
+# Paste the app password with or without spaces, either is fine.
+# Leave both blank and Jarvis simply will not offer email.
+
+GMAIL_ADDRESS=
+GMAIL_APP_PASSWORD=
+
+# Ask out loud before actually sending an email. Strongly
+# recommended -- with this off, a misheard sentence can put mail
+# in front of a client. Drafting is never gated.
+SEND_EMAIL_NEEDS_CONFIRMATION=true
+
+
+# --- VOICE --------------------------------------------------
+# What you say to wake it up. Only "hey jarvis" and "alexa" have
+# ready-made models; anything else falls back to press-Enter.
+WAKE_WORD=hey jarvis
+
+# Set to true to skip the wake word entirely and press Enter to
+# talk instead. Useful in a noisy room, or if the wake word is
+# triggering when you did not mean it.
+PUSH_TO_TALK=false
+
+# The voice it speaks with. check.bat lists the alternatives.
+# Some good ones: en-US-AndrewNeural (warm male),
+# en-US-AriaNeural (female), en-GB-RyanNeural (British male).
+VOICE=en-US-AndrewNeural
+SPEECH_RATE=+8%
+
+# How well it hears you. base.en is quick and accurate enough for
+# commands. small.en is noticeably better with an accent or
+# background noise, and about twice as slow.
+WHISPER_MODEL=base.en
+
+# Which microphone, if you have several. Part of the name is
+# enough -- check.bat prints the list. Blank means the Windows
+# default.
+MIC_NAME=
+
+
+# --- FILES --------------------------------------------------
+# The one folder Jarvis may read from and write to. It cannot
+# see anything outside this, by design.
+WORKSPACE=%USERPROFILE%\Documents
+
+
+# --- EXTRA PROGRAMS -----------------------------------------
+# Programs beyond the built-in list (Word, Excel, Chrome, and so
+# on). Format: spoken name=what to launch, separated by ;
+# Example:
+# EXTRA_APPS=quickbooks=qbw.exe;the crm=C:\Apps\crm\crm.exe
+
+EXTRA_APPS=
+
+
+# --- RECORD KEEPING -----------------------------------------
+# Writes everything it heard, said and did to activity.log, so
+# you can check afterwards what a program with your email and
+# files actually got up to.
+LOG_ACTIONS=true
+
+
+# --- ADVANCED -----------------------------------------------
+MODEL=claude-opus-5

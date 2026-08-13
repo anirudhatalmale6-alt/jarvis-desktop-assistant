@@ -1,0 +1,17 @@
+# Core
+anthropic>=0.121.0
+python-dotenv>=1.0.0
+
+# Speech in (runs locally on this PC -- audio never leaves the machine)
+faster-whisper>=1.2.0
+sounddevice>=0.4.6
+numpy>=1.24
+
+# Speech out (free Microsoft neural voices; needs internet)
+edge-tts>=7.0.0
+playsound3>=3.0.0
+pyttsx3>=2.90          # offline fallback voice built into Windows
+
+# Wake word ("hey jarvis" is a pretrained model, no training needed)
+openwakeword>=0.6.0
+onnxruntime>=1.16
